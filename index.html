@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Belland | Sportif</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
+    <script src="slider.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">Noah Belland</a>
+            <ul class="links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#results">Résultats</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#partners">Partenaires</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="buttons">
+                <a href="#" class="action-button pro">Login</a>
+                <a href="#contact" class="action-button">Contact</a>
+            </div>
+            <button class="burger-menu-button" aria-label="Ouvrir le menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div class="burger-menu">
+            <ul class="burger-menu-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#results">Résultats</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#partners">Partenaires</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div class="divider"></div>
+                <div class="buttons-burger-menu">
+                    <a href="#" class="action-button pro">Login</a>
+                    <a href="#contact" class="action-button">Contact</a>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+    <div id="welcomeModal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer la fenêtre">×</button>
+            <h2>Bonjour, je suis actuellement à la recherche de sponsors</h2>
+            <p>Afin de continuer à progresser et atteindre mes objectifs, je recherche des partenaires prêts à m’accompagner dans cette aventure.</p>
+            <p>Chaque année, cela représente environ 5500 € pour le pôle espoir, 6 jeux de revêtements, 1 bois et des déplacements à travers la France.</p>
+            <p>Si vous êtes intéressé, n’hésitez pas à me contacter.</p>
+            <button class="modal-btn">Continuer</button>
+        </div>
+    </div>
+
+    <div id="legalModal" class="modal hidden">
+        <div class="modal-content legal-modal-content">
+            <button class="modal-close legal-close" aria-label="Fermer la fenêtre">×</button>
+            <h2>Mentions légales</h2>
+            <p><strong>Éditeur :</strong> Noah Belland</p>
+            <p><strong>Responsable :</strong> Noah Belland</p>
+            <p><strong>Site :</strong> Vitrine sportive</p>
+            <p>Ce site a pour objectif de présenter les activités sportives, les résultats et les partenariats liés à l’athlète.</p>
+            <p>Toutes les informations sont fournies à titre indicatif et peuvent être modifiées sans préavis.</p>
+            <button class="modal-btn legal-btn">Fermer</button>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <span class="eyebrow">Athlète • Tennis de table</span>
+                    <h1>Noah Belland</h1>
+                    <p>Joueur passionné, engagé et ambitieux, prêt à relever les défis les plus grands sur les terrains nationaux.</p>
+                    <div class="hero-actions">
+                        <a href="#results" class="action-button primary">Voir les résultats</a>
+                        <a href="#blog" class="action-button secondary">Lire le blog</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div>
+                            <strong>1825</strong>
+                            <span>Classement</span>
+                        </div>
+                        <div>
+                            <strong>122</strong>
+                            <span>Matchs</span>
+                        </div>
+                        <div>
+                            <strong>16ème de finale</strong>
+                            <span>France Cadets 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div id="slider">
+                        <img src="images/1.jpg" alt="Noah Belland en compétition" id="slide">
+                        <button id="precedent" class="slider-btn" onclick="ChangeSlide(-1)" aria-label="Image précédente"><</button>
+                        <button id="suivant" class="slider-btn" onclick="ChangeSlide(1)" aria-label="Image suivante">></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section" id="about">
+            <div class="container info-grid">
+                <div class="info-card">
+                    <h2>Point information</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-table-tennis-paddle-ball"></i><span>Joueur licencié au Club de Tennis de Table de Saint-Pair-Briqueville</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Membre du Pôle Espoir Normandie</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Classement : 1822</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Équipe en Pré-Nationale</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Critérium fédéral niveau national</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Qualifié Championnat de France Cadets (2026)</span></li>
+                    </ul>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-badge">Champion en devenir</div>
+                    <h3>Mon parcours</h3>
+                    <p>Chaque entraînement me rapproche de mon objectif : progresser, gagner en confiance et représenter au mieux mon club et ma région.</p>
+                    <div class="profile-highlights">
+                        <div>
+                            <strong>95%</strong>
+                            <span>Présence aux séances</span>
+                        </div>
+                        <div>
+                            <strong>4/5</strong>
+                            <span>Objectif saison</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section" id="results">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Résultats</span>
+                    <h2>Mes dernières performances</h2>
+                </div>
+                <div class="results-grid">
+                    <article class="result-card highlight">
+                        <p class="result-label">Dernier tournoi</p>
+                        <h3>1er place</h3>
+                        <span>Tableaux -1799</span>
+                    </article>
+                    <article class="result-card">
+                        <p class="result-label">Points</p>
+                        <h3>+2.5</h3>
+                        <span>Depuis le dernier mois</span>
+                    </article>
+                    <article class="result-card">
+                        <p class="result-label">Victoire</p>
+                        <h3>64</h3>
+                        <span>Matchs gagnés</span>
+                    </article>
+                    <article class="result-card">
+                        <p class="result-label">Défaite</p>
+                        <h3>58</h3>
+                        <span>Matchs perdus</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-section" id="blog">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Blog</span>
+                    <h2>Actualités & conseils</h2>
+                </div>
+                <div class="blog-grid">
+                    <!--<article class="blog-card">
+                        <span class="blog-date">12 juin 2026</span>
+                        <h3>Pourquoi la régularité est essentielle en entraînement</h3>
+                        <p>Les séances courtes mais régulières permettent d’améliorer la technique et la confiance.</p>
+                        <a href="#">Lire l’article</a>
+                    </article>
+                    <article class="blog-card">
+                        <span class="blog-date">05 juin 2026</span>
+                        <h3>Préparer une compétition avec calme et méthode</h3>
+                        <p>Un bon plan mental et physique peut faire la différence entre une bonne et une grande journée.</p>
+                        <a href="#">Lire l’article</a>
+                    </article>
+                    <article class="blog-card">
+                        <span class="blog-date">28 mai 2026</span>
+                        <h3>Les clés d’une progression durable</h3>
+                        <p>La discipline, l’écoute de son corps et la répétition sont les bases d’une vraie montée en niveau.</p>
+                        <a href="#">Lire l’article</a>
+                    </article>-->
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-section" id="partners">
+            <div class="container">
+                <div class="section-heading small">
+                    <span class="eyebrow">Partenaires</span>
+                    <h2>Ils m’accompagnent</h2>
+                </div>
+                <div class="slider-partners">
+                    <ul class="brands">
+                        <!--<li><iconify-icon icon="logos:adobe"></iconify-icon></li>
+                        <li><iconify-icon icon="logos:google"></iconify-icon></li>
+                        <li><iconify-icon icon="logos:github"></iconify-icon></li>
+                        <li><iconify-icon icon="logos:netflix"></iconify-icon></li>
+                        <li><iconify-icon icon="logos:spotify"></iconify-icon></li>
+                        <li><iconify-icon icon="logos:slack"></iconify-icon></li>
+                        <li><iconify-icon icon="logos:shopify"></iconify-icon></li>
+                        <li><iconify-icon icon="logos:figma"></iconify-icon></li>-->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Contact</span>
+                    <h2>Écrivez-moi</h2>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h3>Discutons de votre projet</h3>
+                        <p>Vous souhaitez me contacter pour un partenariat, une question.</p>
+                        <ul class="contact-list">
+                            <li><i class="fa-solid fa-location-dot"></i><span>Saint Clair de Halouze, 61490 Orne France</span></li>
+                            <li><i class="fa-solid fa-envelope"></i><span>contact@noahbelland.fr</span></li>
+                            <li><i class="fa-solid fa-envelope"></i><span>ludovic.belland@orange.fr</span></li>
+                            <li><i class="fa-solid fa-phone"></i><span>+33 6 22 37 43 16</span></li>
+                        </ul>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <input type="text" name="nom" placeholder="Nom" aria-label="Nom" required>
+                            <input type="email" name="email" placeholder="Email" aria-label="Email" required>
+                        </div>
+                        <div class="form-row single">
+                            <input type="text" name="objet" placeholder="Objet" aria-label="Objet" required>
+                        </div>
+                        <textarea name="message" rows="6" placeholder="Votre message" aria-label="Message" required></textarea>
+                        <button type="submit" class="action-button primary">Envoyer</button>
+                        <p class="form-success" id="formSuccess" aria-live="polite"></p>
+                        <p class="form-error" id="formError" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© 2026 Noah Belland</p>
+            <a href="#" id="legalLink" onclick="event.preventDefault(); document.getElementById('legalModal').classList.remove('hidden'); document.body.classList.add('modal-open');">Mentions légales</a>
+        </div>
+    </footer>
+</body>
+</html>
